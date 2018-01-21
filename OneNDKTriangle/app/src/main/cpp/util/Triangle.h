@@ -9,6 +9,7 @@ class Triangle {
     GLuint muMVPMatrixHandle;//总变换矩阵引用
     GLuint maPositionHandle;//顶点位置属性引用
     GLuint maColorHandle;//顶点颜色属性引用
+    unsigned int uniformBufferindex;//一致变量缓冲的引用
     const GLvoid* pCoords;//顶点坐标数据
     const GLvoid* pColors;//顶点颜色数据
     int vCount;//顶点数量

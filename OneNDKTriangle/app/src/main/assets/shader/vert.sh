@@ -1,5 +1,10 @@
 #version 300 es
 uniform mat4 Modelview;//总变换矩阵
+//layout (std140) uniform myColor{
+//    float color1;
+//    float color2;
+//    float color3;
+//}
 in vec3 Position;//顶点位置
 in vec4 SourceColor;//顶点颜色
 out vec4 DestinationColor;//用于传给片元着色器

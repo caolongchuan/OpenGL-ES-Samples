@@ -38,6 +38,8 @@ void Triangle::initShader() //创建并初始化着色器的函数
     maColorHandle = glGetAttribLocation(mProgram, "SourceColor");//获取顶点颜色引用
     muMVPMatrixHandle = glGetUniformLocation(mProgram, "Modelview");//获取总变换矩阵引用
 
+    //uniformBufferindex=glGetUniformBlockIndex(mProgram, "myColor");
+
 
 }
 
