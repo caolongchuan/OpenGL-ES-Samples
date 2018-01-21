@@ -35,6 +35,6 @@ void MyGLThread::drawSelf(){
 void MyGLThread::iniUniformBuffer(){
     glGenBuffers(1, &uboExampleBlock);
     glBindBuffer(GL_UNIFORM_BUFFER, uboExampleBlock);
-    glBufferData(GL_UNIFORM_BUFFER, 12, NULL, GL_STATIC_DRAW); // 分配152字节的内存
+    glBufferData(GL_UNIFORM_BUFFER, 8, NULL, GL_STATIC_DRAW); // 分配152字节的内存
     glBindBuffer(GL_UNIFORM_BUFFER, 0);
 }
