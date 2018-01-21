@@ -28,8 +28,16 @@ void MyGLThread::drawSelf(){
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);//清空颜色缓冲和深度缓冲
     MatrixState::setProjectFrustum(-ratio, ratio, -1, 1, 1, 100);//设置投影矩阵
     MatrixState::setCamera(0, 0, 3, 0, 0, 0, 0, 1, 0);//设置摄像机矩阵
+    //绘制红色三角形
     MatrixState::pushMatrix();
-    triangle->drawSelf();//绘制三角形
+    MatrixState::translate(0,1,0);
+    triangle->drawSelf(0);
+    MatrixState::popMatrix();
+
+    //绘制绿色三角形
+    MatrixState::pushMatrix();
+    MatrixState::translate(0,-1,0);
+    triangle->drawSelf(1);
     MatrixState::popMatrix();
 }
 void MyGLThread::iniUniformBuffer(){
