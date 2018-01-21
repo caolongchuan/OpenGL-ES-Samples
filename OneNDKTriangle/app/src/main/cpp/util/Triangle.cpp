@@ -57,15 +57,11 @@ void Triangle::drawSelf()//自定义的绘制三角形的方法
     glBindBufferBase(GL_UNIFORM_BUFFER, 0, MyGLThread::uboExampleBlock);//绑定Uniform缓冲对象到对应的绑定点上
     //使用以下方式使用Uniform缓冲对象
     glBindBuffer(GL_UNIFORM_BUFFER, MyGLThread::uboExampleBlock);
-//    float colorArray[6]={
-//         1.0f,0.0f,0.0f,
-//         0.0f,1.0f,0.0f
-//    };
-    float colorArray[2]={
-            1.0f,0.0f
+    float colorArray[8]={
+            1.0f,0.0f,0.0f,1.0f,
+            0.0f,1.0f,0.0f,1.0f
     };
-    float a=1.0f;
-    glBufferSubData(GL_UNIFORM_BUFFER, 0, 8, &colorArray);
+    glBufferSubData(GL_UNIFORM_BUFFER, 0, 32, &colorArray);
     glBindBuffer(GL_UNIFORM_BUFFER, 0);
 
     glDrawArrays(GL_TRIANGLES, 0, vCount);//执行绘制
