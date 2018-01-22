@@ -27,12 +27,10 @@ extern "C"{
 					case AMOTION_EVENT_ACTION_MOVE://滑动事件
 						xDis=x-xPre;
 						yDis=y-yPre;
-						if (myabs(xDis)>5 || myabs(yDis)>5)//判断触控点位移是否超过阈值
-						{
+						if (myabs(xDis)>5 || myabs(yDis)>5){//判断触控点位移是否超过阈值
 							isClick = false;
 						}
-						if (!isClick)
-						{
+						if (!isClick){
 							CameraUtil::calCamera(yDis*180.0f / 600, xDis*180.0f / 600);
 						}
 						xPre=x;
@@ -40,23 +38,18 @@ extern "C"{
 					break;
 					case AMOTION_EVENT_ACTION_UP://抬起事件
 						#define MOVE_SPAN 10
-						if (isClick)
-						{
-							if (x < MyVulkanManager::screenWidth / 4)
-							{//左移
+						if (isClick){
+							if (x < MyVulkanManager::screenWidth / 4){//左移
 								CameraUtil::cameraGo(0, MOVE_SPAN);
 							}
-							else if (x > MyVulkanManager::screenWidth * 3 / 4)
-							{
+							else if (x > MyVulkanManager::screenWidth * 3 / 4){//右移
 								CameraUtil::cameraGo(0, -MOVE_SPAN);
 							}
-							else if (y < MyVulkanManager::screenHeight / 2)
-							{
+							else if (y < MyVulkanManager::screenHeight / 2){//前移
 								CameraUtil::cameraGo(MOVE_SPAN, 0);
 							}
-							else
-							{
-								CameraUtil::cameraGo(-MOVE_SPAN, 0);
+							else{
+								CameraUtil::cameraGo(-MOVE_SPAN, 0);//后移
 							}
 						}
 					break;
