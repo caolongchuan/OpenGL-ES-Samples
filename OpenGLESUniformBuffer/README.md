@@ -1,1 +1,1 @@
-# 此案例主要用于介绍OpenGL/ES GLSL中的Uniform缓冲（Uniform Buffer）的使用。该案例为基于OpenGL ES开发的案例，开发环境为Android Studio。
+此案例主要用于介绍OpenGL/ES GLSL中的Uniform缓冲（Uniform Buffer）的使用。该案例为基于OpenGL ES开发的案例，开发环境为Android Studio。
