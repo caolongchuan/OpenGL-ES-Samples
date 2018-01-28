@@ -1,3 +1,0 @@
-D:/project/OpenGL-ES-Samples/OpenGLESUniformBuffer/OpenGLESUniformBuffer/app/.externalNativeBuild/cmake/debug/mips64/CMakeFiles/native-lib.dir
-D:/project/OpenGL-ES-Samples/OpenGLESUniformBuffer/OpenGLESUniformBuffer/app/.externalNativeBuild/cmake/debug/mips64/CMakeFiles/edit_cache.dir
-D:/project/OpenGL-ES-Samples/OpenGLESUniformBuffer/OpenGLESUniformBuffer/app/.externalNativeBuild/cmake/debug/mips64/CMakeFiles/rebuild_cache.dir
